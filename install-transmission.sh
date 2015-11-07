@@ -16,18 +16,18 @@ chown -R $uname.$uname /home/$uname/Downloads/
 chmod g+w /home/$uname/Downloads/
 
 # Install the firewall (CSF)
-cd /usr/local/src
-wget http://configserver.com/free/csf.tgz
-tar xzf csf.tgz
-cd csf
-./install.generic.sh
-cd /etc/csf
-sed -i 's/^TESTING =.*/TESTING = "0"/' csf.conf
-sed -i 's/^TCP_IN =.*/TCP_IN = "22,80,9091,10000,51413"/' csf.conf
-sed -i 's/^TCP_OUT =.*/TCP_OUT = "1:65535"/' csf.conf
-sed -i 's/^UDP_IN =.*/UDP_IN = "51413"/' csf.conf
-sed -i 's/^UDP_OUT =.*/UDP_OUT = "1:65535"/' csf.conf
-csf -r
+#cd /usr/local/src
+#wget http://configserver.com/free/csf.tgz
+#tar xzf csf.tgz
+#cd csf
+#./install.generic.sh
+#cd /etc/csf
+#sed -i 's/^TESTING =.*/TESTING = "0"/' csf.conf
+#sed -i 's/^TCP_IN =.*/TCP_IN = "22,80,9091,10000,51413"/' csf.conf
+#sed -i 's/^TCP_OUT =.*/TCP_OUT = "1:65535"/' csf.conf
+#sed -i 's/^UDP_IN =.*/UDP_IN = "51413"/' csf.conf
+#sed -i 's/^UDP_OUT =.*/UDP_OUT = "1:65535"/' csf.conf
+#csf -r
 
 # Install libevent
 cd /usr/local/src
